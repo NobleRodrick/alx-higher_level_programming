@@ -3,4 +3,4 @@
 
 """We are printing the ASCI alphabet in lwr case, excluding a new line"""
 for asci in range(97, 123):
-        print("{}".format(chr(asci)), end="")
+    print("{}".format(chr(asci)), end="")
