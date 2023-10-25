@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Square class defination"""
+"""Definition of the square class"""
 
 
 class Square:
-    """Square class body"""
+    """Body of the class"""
 
     def __init__(self, size=0):
-        """Square contructor.
+        """class constructor.
         Args:
             size (int): The size of the new square.
         """
