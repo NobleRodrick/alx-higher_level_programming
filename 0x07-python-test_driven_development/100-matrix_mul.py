@@ -8,7 +8,7 @@ def matrix_mul(m_a, m_b):
         m_a: the first matrix
         m_b: the second matrix
     Returns:
-        matrix: the produc or result matrixt
+        matrix: the product
     Raises:
         TypeError: If m_a or m_b are not lists.
         TypeError: If m_a or m_b are not lists of lists.
@@ -58,7 +58,7 @@ def matrix_mul(m_a, m_b):
     if m_b_notnum:
         raise TypeError("m_b should contain only integers or floats")
 
-                                                                                                                                                                            if m_a_notrect:
+    if m_a_notrect:
         raise TypeError("each row of m_a must should be of the same size")
 
     if m_b_notrect:
@@ -66,6 +66,8 @@ def matrix_mul(m_a, m_b):
 
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
+
+    res = [[] for i in range(len(m_a))]
 
     for i in range(len(m_a)):
         for j in range(len(m_b[0])):
@@ -76,6 +78,6 @@ def matrix_mul(m_a, m_b):
 
     return res
 
-    if __name__ == "__main__":
-        import doctest
-        doctest.testfile("tests/100-matrix_mul.txt")
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/100-matrix_mul.txt")
