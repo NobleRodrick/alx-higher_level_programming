@@ -9,7 +9,7 @@ import requests
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    inputted_url = sys.argv[1]
 
-    the_url_request = requests.get(url)
+    the_url_request = requests.get(inputted_url)
     print(the_url_request.headers.get("X-Request-Id"))

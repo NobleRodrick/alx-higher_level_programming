@@ -8,8 +8,8 @@ import requests
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    value = {"email": sys.argv[2]}
+    inputted_url = sys.argv[1]
+    email_value = {"email": sys.argv[2]}
 
-    the_given_response = requests.post(url, data=value)
+    the_given_response = requests.post(inputted_url, data=email_value)
     print(the_given_response.text)

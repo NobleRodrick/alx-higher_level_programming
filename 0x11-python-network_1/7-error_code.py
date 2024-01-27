@@ -10,9 +10,9 @@ import requests
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    inputted_url = sys.argv[1]
 
-    the_given_response = requests.get(url)
+    the_given_response = requests.get(inputted_url)
     if the_given_response.status_code >= 400:
         print("Error code: {}".format(the_given_response.status_code))
     else:

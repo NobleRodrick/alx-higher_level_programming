@@ -9,10 +9,10 @@ import requests
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(
+    the_given_url = "https://api.github.com/repos/{}/{}/commits".format(
         sys.argv[2], sys.argv[1])
 
-    the_given_response = requests.get(url)
+    the_given_response = requests.get(the_given_url)
     commits = the_given_response.json()
     try:
         for a in range(10):

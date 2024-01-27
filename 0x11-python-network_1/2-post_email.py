@@ -12,9 +12,9 @@ import sys
 
 if __name__ == "__main__":
     the_url = sys.argv[1]
-    value = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(value).encode("ascii")
+    email_value = {"email": sys.argv[2]}
+    encoded_data = urllib.parse.urlencode(email_value).encode("ascii")
 
-    request = urllib.request.Request(the_url, data)
+    request = urllib.request.Request(the_url, encoded_data)
     with urllib.request.urlopen(request) as the_given_response:
         print(the_given_response.read().decode("utf-8"))
