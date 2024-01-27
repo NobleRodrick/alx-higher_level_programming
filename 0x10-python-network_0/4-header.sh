@@ -1,4 +1,5 @@
 #!/bin/bash
-# Script that sends a GET request to a URL using curl
-# and display the body of the response
-curl -sH "X-School-User-Id: 98" "$1"
+# This is a csript that takes in a URL as an argument,
+# sends a GET request to the URL, and displays the body of the response. 
+# Also, a header variable X-School-User-Id must be sent with the value 98.
+curl -s "$1" -X GET -H "X-School-User-Id: 98"

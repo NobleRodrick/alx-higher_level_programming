@@ -1,4 +1,4 @@
 #!/bin/bash
-# Bash script takes in a url, sends a get request to the url
-# and displays the body of the response(200 status code)
-curl -sL "$1"
+# A script that takes in a URL, sends a GET request to the URL,
+# and displays the body of the response.
+curl -sL "$1" -X GET -D ./header -o ./output; if grep -q "200 OK" ./header; then cat ./output; fi
